@@ -1,3 +1,48 @@
-[gd_scene format=3 uid="uid://cyknqyaf3pf2g"]
+[gd_scene load_steps=7 format=3 uid="uid://cyknqyaf3pf2g"]
+
+[ext_resource type="Script" path="res://scripts/Player.cs" id="1_romvo"]
+[ext_resource type="Texture2D" uid="uid://bgl0o4k2ghvk2" path="res://assets/sprite_idle/idle_1.png" id="2_jp6g6"]
+[ext_resource type="Texture2D" uid="uid://gnrqx1g300u1" path="res://assets/sprite_idle/idle_2.png" id="3_1djuq"]
+[ext_resource type="Texture2D" uid="uid://byclxwbf3p3lx" path="res://assets/sprite_idle/idle_3.png" id="4_uvffe"]
+[ext_resource type="Texture2D" uid="uid://bpvv8frqtk75w" path="res://assets/sprite_idle/idle_4.png" id="5_0gni8"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_a08ch"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_jp6g6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_1djuq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_uvffe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_0gni8")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 6.0
+}]
 
 [node name="Node2D" type="Node2D"]
+
+[node name="Player" type="CharacterBody2D" parent="."]
+script = ExtResource("1_romvo")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
+position = Vector2(231, 161)
+sprite_frames = SubResource("SpriteFrames_a08ch")
+animation = &"idle"
+frame_progress = 0.744987
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Player"]
+polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+
+[node name="Lantern" type="Sprite2D" parent="Player"]
+
+[node name="PointLight2D" type="PointLight2D" parent="Player/Lantern"]
+color = Color(0.72549, 0.713726, 0.360784, 1)
+
+[node name="Floor" type="Sprite2D" parent="."]
