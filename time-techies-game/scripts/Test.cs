@@ -1,5 +1,6 @@
 using Godot;
-using System;
+
+namespace TimeTechiesGame.scripts;
 
 public partial class Test : Node
 {
