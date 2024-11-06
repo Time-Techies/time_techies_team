@@ -1,3 +1,18 @@
-[gd_scene format=3 uid="uid://cyknqyaf3pf2g"]
+[gd_scene load_steps=2 format=3 uid="uid://cyknqyaf3pf2g"]
+
+[ext_resource type="Script" path="res://scripts/Player.cs" id="1_romvo"]
 
 [node name="Node2D" type="Node2D"]
+
+[node name="Player" type="CharacterBody2D" parent="."]
+script = ExtResource("1_romvo")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Player"]
+polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
+
+[node name="Lantern" type="Sprite2D" parent="Player"]
+
+[node name="PointLight2D" type="PointLight2D" parent="Player/Lantern"]
+color = Color(0.72549, 0.713726, 0.360784, 1)
