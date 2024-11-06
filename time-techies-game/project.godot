@@ -10,10 +10,17 @@ config_version=5
 
 [application]
 
-config/name="Byte-Jam-2024"
-config/features=PackedStringArray("4.2", "Forward Plus")
+config/name="Time Techies Game"
+run/main_scene="res://main.tscn"
+config/features=PackedStringArray("4.3", "C#", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/stretch/mode="viewport"
 
 [dotnet]
 
-project/assembly_name="Byte-Jam-2024"
+project/assembly_name="Time Techies Game"
