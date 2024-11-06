@@ -1,3 +1,4 @@
+using System.Text.RegularExpressions;
 using Godot;
 
 namespace TimeTechiesGame.scripts;
@@ -9,6 +10,30 @@ public partial class Player : CharacterBody2D
 	
 	[Export]
 	public const float JumpVelocity = -400.0f;
+	
+	private AnimatedSprite2D _animatedSprite;
+
+	public override void _Ready()
+	{
+		_animatedSprite = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
+	}
+	
+	// TODO At end add light pulsing during movement and idle.
+
+	public override void _Process(double delta)
+	{
+		if (Input.IsActionPressed("ui_right") || Input.IsActionPressed("ui_left"))
+		{
+			_animatedSprite.Stop();
+			// IF delta/speed > x do running
+			_animatedSprite.Play(Input.IsActionPressed("ui_left") ? "walk_left" : "walk_right");
+		}
+		else
+		{
+			_animatedSprite.Stop();
+			_animatedSprite.Play("idle");
+		}
+	}
 
 	public override void _PhysicsProcess(double delta)
 	{
