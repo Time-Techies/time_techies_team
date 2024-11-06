@@ -40,7 +40,7 @@ public partial class BackgroundScene : Node2D
 		{
 			if (_backgrounds[i].Position.X <= -_backgroundWidth)
 			{
-				// Find the other background's position to loop
+				// looping to find the second background's position to start the loop over
 				int secondBackground = (i + 1) % _backgrounds.Count;
 				_backgrounds[i].Position = new Vector2(_backgrounds[secondBackground].Position.X + _backgroundWidth, _backgrounds[i].Position.Y);
 			}
