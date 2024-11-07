@@ -6,7 +6,4 @@
     <EnableDynamicLoading>true</EnableDynamicLoading>
     <RootNamespace>TimeTechiesGame</RootNamespace>
   </PropertyGroup>
-  <ItemGroup>
-    <Folder Include="scripts\" />
-  </ItemGroup>
 </Project>
