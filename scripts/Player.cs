@@ -1,5 +1,3 @@
-using System;
-using System.Text.RegularExpressions;
 using Godot;
 
 namespace TimeTechiesGame.scripts;
@@ -39,7 +37,7 @@ public partial class Player : CharacterBody2D
 			{
 				_animatedSprite.Play("jump-left");
 			}
-			else if (Input.IsActionPressed("ui_right"))
+			else if (Input.IsActionPressed("ui_right")) 
 			{
 				_animatedSprite.Play("jump");
 			}
