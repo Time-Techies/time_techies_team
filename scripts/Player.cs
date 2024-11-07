@@ -11,6 +11,8 @@ public partial class Player : CharacterBody2D
 	[Export]
 	public float JumpVelocity = -400.0f;
 	
+	[Export] public float Gravity = 1000.0f;
+	
 	private AnimatedSprite2D _animatedSprite;
 
 	public override void _Ready()
@@ -47,7 +49,7 @@ public partial class Player : CharacterBody2D
 		// Add the gravity.
 		if (!IsOnFloor())
 		{
-			var gravity = GetGravity() * (float)delta;
+			Vector2 gravity = new Vector2(0, Gravity * (float)delta);
 			Velocity += gravity;
 		}
 
