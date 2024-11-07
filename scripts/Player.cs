@@ -1,3 +1,4 @@
+using System;
 using System.Text.RegularExpressions;
 using Godot;
 
@@ -24,20 +25,31 @@ public partial class Player : CharacterBody2D
 
 	public override void _Process(double delta)
 	{
-		var direction = Vector2.Zero;
-		
-		if (Input.IsActionPressed("ui_right"))
+		if (Input.IsActionPressed("ui_right") && IsOnFloor())
 		{
 			// IF delta/speed > x do running
-			direction.X += 1;
 			_animatedSprite.Play("walk-right");
 		}
-		else if (Input.IsActionPressed("ui_left"))
+		else if (Input.IsActionPressed("ui_left") && IsOnFloor())
 		{
-			direction.X -= 1;
 			_animatedSprite.Play("walk-left");
 		}
-		else
+		else if (Input.IsActionPressed("ui_accept") && !IsOnFloor())
+		{
+			if (Input.IsActionPressed("ui_left"))
+			{
+				_animatedSprite.Play("idle");
+			}
+			else if (Input.IsActionPressed("ui_right"))
+			{
+				_animatedSprite.Play("jump");
+			}
+			else
+			{
+				_animatedSprite.Play("jump");
+			}
+		}
+		else if (IsOnFloor())
 		{
 			_animatedSprite.Play("idle");
 		}

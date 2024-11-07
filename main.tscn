@@ -1,18 +1,24 @@
-[gd_scene load_steps=18 format=3 uid="uid://cyknqyaf3pf2g"]
+[gd_scene load_steps=24 format=3 uid="uid://cyknqyaf3pf2g"]
 
 [ext_resource type="Script" path="res://scripts/Player.cs" id="1_romvo"]
 [ext_resource type="Texture2D" uid="uid://bgl0o4k2ghvk2" path="res://assets/sprite_idle/idle_1.png" id="2_jp6g6"]
 [ext_resource type="Texture2D" uid="uid://gnrqx1g300u1" path="res://assets/sprite_idle/idle_2.png" id="3_1djuq"]
 [ext_resource type="Texture2D" uid="uid://byclxwbf3p3lx" path="res://assets/sprite_idle/idle_3.png" id="4_uvffe"]
 [ext_resource type="Texture2D" uid="uid://bpvv8frqtk75w" path="res://assets/sprite_idle/idle_4.png" id="5_0gni8"]
-[ext_resource type="Texture2D" uid="uid://dn50ucviucev2" path="res://assets/walk-left/s_lwalk1.png" id="6_dorwq"]
-[ext_resource type="Texture2D" uid="uid://or580xjl3n6n" path="res://assets/walk-left/s_lwalk2.png" id="7_hdr36"]
-[ext_resource type="Texture2D" uid="uid://btpp54aswqcd3" path="res://assets/walk-left/s_lwalk3.png" id="8_68e0d"]
-[ext_resource type="Texture2D" uid="uid://c64uxh6vmn31f" path="res://assets/walk-left/s_lwalk4.png" id="9_sunue"]
-[ext_resource type="Texture2D" uid="uid://dloyndqvy44k4" path="res://assets/walk-right/s_rwalk1.png" id="10_5es4c"]
-[ext_resource type="Texture2D" uid="uid://c7ya8cbawpt53" path="res://assets/walk-right/s_rwalk2.png" id="11_oqmys"]
-[ext_resource type="Texture2D" uid="uid://mwfwr6by4hub" path="res://assets/walk-right/s_rwalk3.png" id="12_ca3n5"]
-[ext_resource type="Texture2D" uid="uid://csea3dqm440be" path="res://assets/walk-right/s_rwalk4.png" id="13_yghw5"]
+[ext_resource type="Texture2D" uid="uid://cctp71voswiaw" path="res://assets/walk-left/s_lwalk1.png" id="6_dorwq"]
+[ext_resource type="Texture2D" uid="uid://w58q3hkrkce1" path="res://assets/walk-left/s_lwalk2.png" id="7_hdr36"]
+[ext_resource type="Texture2D" uid="uid://b0u3qj5t5ral7" path="res://assets/jump/sprite-jump2.png" id="7_jftnq"]
+[ext_resource type="Texture2D" uid="uid://bv6njg7y8si17" path="res://assets/walk-left/s_lwalk3.png" id="8_68e0d"]
+[ext_resource type="Texture2D" uid="uid://c1vtpb7t7le5e" path="res://assets/jump/sprite-jump3.png" id="8_jk7mp"]
+[ext_resource type="Texture2D" uid="uid://cxwtbsxlirh18" path="res://assets/jump/sprite-jump4.png" id="9_giqkk"]
+[ext_resource type="Texture2D" uid="uid://cbn35xqf1101k" path="res://assets/walk-left/s_lwalk4.png" id="9_sunue"]
+[ext_resource type="Texture2D" uid="uid://b410ms7koclup" path="res://assets/walk-right/s_rwalk1.png" id="10_5es4c"]
+[ext_resource type="Texture2D" uid="uid://oqsubkxinaw7" path="res://assets/jump/sprite-jump5.png" id="10_utkyf"]
+[ext_resource type="Texture2D" uid="uid://dq51wklclb3ly" path="res://assets/walk-right/s_rwalk2.png" id="11_oqmys"]
+[ext_resource type="Texture2D" uid="uid://d0os7fy0c54em" path="res://assets/jump/sprite-jump6.png" id="11_urvdg"]
+[ext_resource type="Texture2D" uid="uid://c0yswn076tp6l" path="res://assets/walk-right/s_rwalk3.png" id="12_ca3n5"]
+[ext_resource type="Texture2D" uid="uid://b5df2tx84moe3" path="res://assets/jump/sprite-jump7.png" id="12_puyq6"]
+[ext_resource type="Texture2D" uid="uid://b6y1oqnrpt1ju" path="res://assets/walk-right/s_rwalk4.png" id="13_yghw5"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_g6nni"]
 
@@ -41,6 +47,29 @@ animations = [{
 "loop": true,
 "name": &"idle",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_jftnq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_jk7mp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_giqkk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_utkyf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_urvdg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_puyq6")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 7.5
 }, {
 "frames": [{
 "duration": 1.0,
@@ -105,10 +134,9 @@ z_index = 1
 shape = SubResource("CapsuleShape2D_3me0s")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
-position = Vector2(-5, -5)
+position = Vector2(-4, -6)
 sprite_frames = SubResource("SpriteFrames_a08ch")
-animation = &"idle"
-frame_progress = 0.867279
+animation = &"jump"
 
 [node name="Lantern" type="Sprite2D" parent="Player"]
 
