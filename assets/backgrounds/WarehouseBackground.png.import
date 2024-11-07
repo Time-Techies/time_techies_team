@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bc0814nkjaqxk"
-path="res://.godot/imported/left-jump3.png-fb8de024d99861395f2f095959e40519.ctex"
+uid="uid://dtc0o2gsr0nl5"
+path="res://.godot/imported/WarehouseBackground.png-4079c1993231358d2e73e499121d0923.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/jump-left/left-jump3.png"
-dest_files=["res://.godot/imported/left-jump3.png-fb8de024d99861395f2f095959e40519.ctex"]
+source_file="res://assets/backgrounds/WarehouseBackground.png"
+dest_files=["res://.godot/imported/WarehouseBackground.png-4079c1993231358d2e73e499121d0923.ctex"]
 
 [params]
 
