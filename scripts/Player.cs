@@ -23,28 +23,13 @@ public partial class Player : CharacterBody2D
 
 	public override void _Process(double delta)
 	{
-		if (Input.IsActionPressed("ui_right") && IsOnFloor())
+		if ((Input.IsActionPressed("ui_right") || Input.IsActionPressed("ui_left")) && IsOnFloor())
 		{
-			_animatedSprite.Play("walk-right");
-		}
-		else if (Input.IsActionPressed("ui_left") && IsOnFloor())
-		{
-			_animatedSprite.Play("walk-left");
+			_animatedSprite.Play(Input.IsActionPressed("ui_left") ? "walk-left" : "walk-right");
 		}
 		else if (Input.IsActionPressed("ui_accept") && !IsOnFloor())
 		{
-			if (Input.IsActionPressed("ui_left"))
-			{
-				_animatedSprite.Play("jump-left");
-			}
-			else if (Input.IsActionPressed("ui_right")) 
-			{
-				_animatedSprite.Play("jump");
-			}
-			else
-			{
-				_animatedSprite.Play("jump");
-			}
+			_animatedSprite.Play(Input.IsActionPressed("ui_left") ? "jump-left" : "jump" );
 		}
 		else if (IsOnFloor())
 		{
