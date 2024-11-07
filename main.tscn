@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://cyknqyaf3pf2g"]
+[gd_scene load_steps=30 format=3 uid="uid://cyknqyaf3pf2g"]
 
 [ext_resource type="Script" path="res://scripts/Player.cs" id="1_romvo"]
 [ext_resource type="Texture2D" uid="uid://bgl0o4k2ghvk2" path="res://assets/sprite_idle/idle_1.png" id="2_jp6g6"]
@@ -18,7 +18,13 @@
 [ext_resource type="Texture2D" uid="uid://d0os7fy0c54em" path="res://assets/jump/sprite-jump6.png" id="11_urvdg"]
 [ext_resource type="Texture2D" uid="uid://c0yswn076tp6l" path="res://assets/walk-right/s_rwalk3.png" id="12_ca3n5"]
 [ext_resource type="Texture2D" uid="uid://b5df2tx84moe3" path="res://assets/jump/sprite-jump7.png" id="12_puyq6"]
+[ext_resource type="Texture2D" uid="uid://doqoou7k15wwa" path="res://assets/jump-left/left-jump2.png" id="12_xwonm"]
+[ext_resource type="Texture2D" uid="uid://bc0814nkjaqxk" path="res://assets/jump-left/left-jump3.png" id="13_iqw0o"]
 [ext_resource type="Texture2D" uid="uid://b6y1oqnrpt1ju" path="res://assets/walk-right/s_rwalk4.png" id="13_yghw5"]
+[ext_resource type="Texture2D" uid="uid://cxn0c376mvxi8" path="res://assets/jump-left/left-jump4.png" id="14_egk0b"]
+[ext_resource type="Texture2D" uid="uid://c7wbx7qgfye4o" path="res://assets/jump-left/left-jump5.png" id="15_8ta3p"]
+[ext_resource type="Texture2D" uid="uid://whhfwwpxl8ow" path="res://assets/jump-left/left-jump6.png" id="16_3x6a4"]
+[ext_resource type="Texture2D" uid="uid://bk0cbjuy8mi02" path="res://assets/jump-left/left-jump7.png" id="17_ogvmp"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_g6nni"]
 
@@ -70,6 +76,29 @@ animations = [{
 "loop": true,
 "name": &"jump",
 "speed": 7.5
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_xwonm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_iqw0o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_egk0b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_8ta3p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_3x6a4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_ogvmp")
+}],
+"loop": true,
+"name": &"jump-left",
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -136,7 +165,7 @@ shape = SubResource("CapsuleShape2D_3me0s")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
 position = Vector2(-4, -6)
 sprite_frames = SubResource("SpriteFrames_a08ch")
-animation = &"jump"
+animation = &"jump-left"
 
 [node name="Lantern" type="Sprite2D" parent="Player"]
 
