@@ -27,7 +27,6 @@ public partial class Player : CharacterBody2D
 	{
 		if (Input.IsActionPressed("ui_right") && IsOnFloor())
 		{
-			// IF delta/speed > x do running
 			_animatedSprite.Play("walk-right");
 		}
 		else if (Input.IsActionPressed("ui_left") && IsOnFloor())
@@ -38,7 +37,7 @@ public partial class Player : CharacterBody2D
 		{
 			if (Input.IsActionPressed("ui_left"))
 			{
-				_animatedSprite.Play("idle");
+				_animatedSprite.Play("jump-left");
 			}
 			else if (Input.IsActionPressed("ui_right"))
 			{
