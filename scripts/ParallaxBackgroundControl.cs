@@ -1,5 +1,6 @@
 using Godot;
-using System;
+
+namespace TimeTechiesGame.scripts;
 
 public partial class ParallaxBackgroundControl : ParallaxBackground
 {
@@ -24,6 +25,7 @@ public partial class ParallaxBackgroundControl : ParallaxBackground
 		
 		var secondSpriteLayer = _secondLayer.GetNode<Sprite2D>("Sprite2D");
 		secondSpriteLayer.Texture = OtherBackgroundTexture;
+		
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -31,6 +33,17 @@ public partial class ParallaxBackgroundControl : ParallaxBackground
 	{
 		_firstLayer.MotionOffset -= new Vector2(ParallaxScroll * (float)delta, 0);
 		_secondLayer.MotionOffset -= new Vector2(ParallaxScroll * (float)delta, 0);
+
+		if (PlayerHitRightSide())
+		{
+		}
+	}
+
+	private bool PlayerHitRightSide()
+	{
+		var player = GetNode<Node2D>("Player");
+	
+		return player.Position.X >= player.GlobalPosition.X + ParallaxSpeed2;
 	}
 
 	
