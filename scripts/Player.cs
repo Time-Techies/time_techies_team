@@ -6,10 +6,10 @@ namespace TimeTechiesGame.scripts;
 public partial class Player : CharacterBody2D
 {
 	[Export]
-	public const float Speed = 300.0f;
+	public float Speed = 300.0f;
 	
 	[Export]
-	public const float JumpVelocity = -400.0f;
+	public float JumpVelocity = -400.0f;
 	
 	private AnimatedSprite2D _animatedSprite;
 
@@ -22,15 +22,21 @@ public partial class Player : CharacterBody2D
 
 	public override void _Process(double delta)
 	{
-		if (Input.IsActionPressed("ui_right") || Input.IsActionPressed("ui_left"))
+		var direction = Vector2.Zero;
+		
+		if (Input.IsActionPressed("ui_right"))
 		{
-			_animatedSprite.Stop();
 			// IF delta/speed > x do running
-			_animatedSprite.Play(Input.IsActionPressed("ui_left") ? "walk_left" : "walk_right");
+			direction.X += 1;
+			_animatedSprite.Play("walk-right");
+		}
+		else if (Input.IsActionPressed("ui_left"))
+		{
+			direction.X -= 1;
+			_animatedSprite.Play("walk-left");
 		}
 		else
 		{
-			_animatedSprite.Stop();
 			_animatedSprite.Play("idle");
 		}
 	}
