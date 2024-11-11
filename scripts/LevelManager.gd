@@ -21,7 +21,7 @@ func go_to_level(level_tag: String, destination_tag: String):
 	if scene_to_load != null:
 		spawn_door_tag = destination_tag
 		get_tree().change_scene_to_packed(scene_to_load)
-		
+
 		# Wait for one frame to ensure the scene has loaded
 		await get_tree().process_frame
 
@@ -30,7 +30,7 @@ func go_to_level(level_tag: String, destination_tag: String):
 
 		# Find the spawn point in the destination access point
 		var spawn_point = current_scene.get_node_or_null("AccessPoint_%s/Spawn" % destination_tag)
-		
+
 		if spawn_point != null:
 			# Instance the player
 			var player = player_scene.instantiate()
