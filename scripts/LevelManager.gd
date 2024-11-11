@@ -1,9 +1,3 @@
-<<<<<<< Updated upstream
-extends Area2D
-func _on_body_entered(body):
-	if body.is_in_gorup("Echo"):
-		body.set_position($DestinationPoint.global_position)
-=======
 extends Node
 
 @onready var menu = preload("res://start-screen/main-menu.tscn")
@@ -51,4 +45,3 @@ func go_to_level(level_tag: String, destination_tag: String):
 
 func trigger_player_spawn(position: Vector2, direction: String):
 	emit_signal("on_trigger_player_spawn", position, direction)
->>>>>>> Stashed changes
