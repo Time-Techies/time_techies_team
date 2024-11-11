@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://whhfwwpxl8ow"
-path="res://.godot/imported/spr_sans.png-2ab939528b2e709e2be84653eb784563.ctex"
+uid="uid://tcmua4kmksjo"
+path="res://.godot/imported/book2.png-23860ce56eaca02a1545085df09933c0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/items/spr_sans.png"
-dest_files=["res://.godot/imported/spr_sans.png-2ab939528b2e709e2be84653eb784563.ctex"]
+source_file="res://artifacts/book2.png"
+dest_files=["res://.godot/imported/book2.png-23860ce56eaca02a1545085df09933c0.ctex"]
 
 [params]
 

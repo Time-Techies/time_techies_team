@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://whhfwwpxl8ow"
-path="res://.godot/imported/spr_sans.png-2ab939528b2e709e2be84653eb784563.ctex"
+uid="uid://bbk5tfmbyrum0"
+path="res://.godot/imported/Oil_Lantern_Frame_1.png-3c32bbc44aa20854b7c83c5f361222d9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/items/spr_sans.png"
-dest_files=["res://.godot/imported/spr_sans.png-2ab939528b2e709e2be84653eb784563.ctex"]
+source_file="res://lantern/Lantern_Animation/Oil_Lantern_Frame_1.png"
+dest_files=["res://.godot/imported/Oil_Lantern_Frame_1.png-3c32bbc44aa20854b7c83c5f361222d9.ctex"]
 
 [params]
 

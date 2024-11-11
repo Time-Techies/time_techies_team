@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://whhfwwpxl8ow"
-path="res://.godot/imported/spr_sans.png-2ab939528b2e709e2be84653eb784563.ctex"
+uid="uid://nam8silupjk2"
+path="res://.godot/imported/MedievalTimesBackground.png-5ecfed0dbb4adc6efd7e6bbecd7e6fc1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/items/spr_sans.png"
-dest_files=["res://.godot/imported/spr_sans.png-2ab939528b2e709e2be84653eb784563.ctex"]
+source_file="res://assets/backgrounds/MedievalTimesBackground.png"
+dest_files=["res://.godot/imported/MedievalTimesBackground.png-5ecfed0dbb4adc6efd7e6bbecd7e6fc1.ctex"]
 
 [params]
 

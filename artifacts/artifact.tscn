@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://daj21ibegts6q"]
+
+[ext_resource type="Script" path="res://artifacts/artifact.gd" id="1_hjcu8"]
+[ext_resource type="Texture2D" uid="uid://tcmua4kmksjo" path="res://artifacts/book2.png" id="1_jdwyo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qu7ka"]
+size = Vector2(14, 28)
+
+[node name="Artifact" type="Area2D"]
+script = ExtResource("1_hjcu8")
+
+[node name="Book2" type="Sprite2D" parent="."]
+position = Vector2(-1, -1)
+texture = ExtResource("1_jdwyo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(6, -1)
+shape = SubResource("RectangleShape2D_qu7ka")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

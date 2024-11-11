@@ -6,14 +6,14 @@ using FileAccess = Godot.FileAccess;
 public partial class MainMenu : Control
 {
 	private LineEdit _nameInput;
-	private Button _startButton;
+	private TextureButton _startButton;
 
 	private string _filePath = "start-screen/names.txt";
 	
 	public override void _Ready()
 	{
 		_nameInput = GetNode<LineEdit>("LineEdit");
-		_startButton = GetNode<Button>("Start");
+		_startButton = GetNode<TextureButton>("Start");
 
 		_startButton.Pressed += OnButtonPressed;
 	}
@@ -24,8 +24,8 @@ public partial class MainMenu : Control
 	private void OnButtonPressed()
 	{
 		// Change to game scene
-		GetTree().ChangeSceneToFile("res://main.tscn");
-		
+		GetTree().ChangeSceneToFile("res://game.tscn");
+
 		string PlayerName = _nameInput.Text;
 		
 		GD.Print("Button was pressed! Player Name: " + PlayerName);
