@@ -8,18 +8,6 @@ size = Vector2(2524, 0.5)
 
 [node name="FirstLevel" type="StaticBody2D"]
 
-[node name="AccessPoint_L" parent="." instance=ExtResource("2_gt2et")]
-position = Vector2(-531, 409)
-destination_level_tag = "main"
-destination_door_tag = "L"
-spawn_direction = "left"
-
-[node name="CollisionShape2D" parent="AccessPoint_L" index="0"]
-position = Vector2(640, 88)
-
-[node name="Spawn" parent="AccessPoint_L" index="1"]
-position = Vector2(640, 93)
-
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(1263, 179)
 texture = ExtResource("1_6xbgg")
@@ -27,5 +15,17 @@ texture = ExtResource("1_6xbgg")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1263, 716.25)
 shape = SubResource("RectangleShape2D_4l6uk")
+
+[node name="AccessPoint_L" parent="." instance=ExtResource("2_gt2et")]
+position = Vector2(-531, 409)
+destination_level_tag = "main"
+destination_door_tag = "L"
+spawn_direction = "left"
+
+[node name="CollisionShape2D" parent="AccessPoint_L" index="0"]
+position = Vector2(623, 196)
+
+[node name="Spawn" parent="AccessPoint_L" index="1"]
+position = Vector2(623, 200)
 
 [editable path="AccessPoint_L"]

@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using TimeTechiesGame.scripts;
 
 public partial class accessPoint : Area2D
 {
@@ -17,7 +18,7 @@ public partial class accessPoint : Area2D
 
     private void _on_body_entered(Node body)
     {
-        if (body is TimeTechiesGame.scripts.Player)
+        if (body is Player)
         {
             // Defer the scene change to the next frame
             CallDeferred("_change_level");

@@ -15,18 +15,29 @@ public partial class LevelManager : Node
     public async Task go_to_level(string levelTag, string destinationTag)
     {
         PackedScene sceneToLoad = null;
-        
-        
-        switch (levelTag)
+
+        if (levelTag == "L")
         {
-            case "L":
-                sceneToLoad = _firstScene;
-                break;
-            case "R":
-                sceneToLoad = _secondScene;
-                break;
+            sceneToLoad = _firstScene;
+        } else if (levelTag == "R")
+        {
+            sceneToLoad = _secondScene;
+        }
+        else
+        {
+            sceneToLoad = _firstScene;
         }
         
+        // switch (levelTag)
+        // {
+        //     case "L":
+        //         sceneToLoad = _firstScene;
+        //         break;
+        //     case "R":
+        //         sceneToLoad = _secondScene;
+        //         break;
+        // }
+        //
 
         if (sceneToLoad != null)
         {
