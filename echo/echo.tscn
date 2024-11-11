@@ -134,6 +134,7 @@ height = 96.56
 [node name="Echo" type="CharacterBody2D" groups=["Echo"]]
 position = Vector2(-18, 21)
 scale = Vector2(2, 2)
+platform_floor_layers = 4294967041
 script = ExtResource("1_kdvum")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
