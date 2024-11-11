@@ -34,9 +34,7 @@ offset_bottom = 492.0
 texture = ExtResource("2_ugtwv")
 stretch_mode = 5
 
-
 [node name="TextureButton" type="TextureButton" parent="."]
-
 layout_mode = 2
 offset_left = 473.0
 offset_top = 470.0
@@ -56,17 +54,12 @@ anchor_right = 0.167
 anchor_bottom = 0.135
 offset_left = 510.0
 offset_top = 381.0
-
 offset_right = 592.24
 offset_bottom = 351.8
-
 theme_override_colors/font_placeholder_color = Color(0.458405, 0.458405, 0.458405, 1)
 theme_override_colors/font_color = Color(0.899258, 0.899258, 0.899258, 1)
-
 theme_override_fonts/font = ExtResource("6_sp7fq")
 theme_override_font_sizes/font_size = 49
 placeholder_text = "Enter Player Name"
 
-
 [connection signal="pressed" from="TextureButton" to="." method="OnButtonPressed"]
-

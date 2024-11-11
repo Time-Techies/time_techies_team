@@ -1,0 +1,49 @@
+[gd_scene load_steps=11 format=3 uid="uid://dganu44l8no6t"]
+
+[ext_resource type="Texture2D" uid="uid://bbk5tfmbyrum0" path="res://lantern/Lantern_Animation/Oil_Lantern_Frame_1.png" id="1_kkeuc"]
+[ext_resource type="Texture2D" uid="uid://14mof30rvrhy" path="res://lantern/Lantern_Animation/Oil_Lantern_Frame_2.png" id="2_ctrfb"]
+[ext_resource type="Texture2D" uid="uid://bo2lnbxnns8in" path="res://lantern/Lantern_Animation/Oil_Lantern_Frame_3.png" id="3_26cum"]
+[ext_resource type="Texture2D" uid="uid://b5cbbclfq2ctq" path="res://lantern/Lantern_Animation/Oil_Lantern_Frame_4.png" id="4_40ci0"]
+[ext_resource type="Texture2D" uid="uid://ckjnddu43xfuo" path="res://lantern/Lantern_Animation/Oil_Lantern_Frame_5.png" id="5_n5wgj"]
+[ext_resource type="Texture2D" uid="uid://bun5yr7lyd480" path="res://lantern/Lantern_Animation/Oil_Lantern_Frame_6.png" id="6_ks2og"]
+[ext_resource type="Texture2D" uid="uid://dn1newev4odoc" path="res://lantern/Lantern_Animation/Oil_Lantern_Frame_7.png" id="7_lko4h"]
+[ext_resource type="Texture2D" uid="uid://dl3sd557l61mk" path="res://lantern/Lantern_Animation/Oil_Lantern_Frame_8.png" id="8_wf3jw"]
+[ext_resource type="Script" path="res://lantern/Lantern.gd" id="9_lj0hf"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_f16dw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_kkeuc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_ctrfb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_26cum")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_40ci0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_n5wgj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ks2og")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_lko4h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_wf3jw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Lantern" type="Node2D"]
+script = ExtResource("9_lj0hf")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_f16dw")
