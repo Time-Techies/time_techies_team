@@ -43,7 +43,3 @@ func _physics_process(delta):
 
 	# Apply the velocity and move the character.
 	move_and_slide()
-
-
-func _on_artifact_body_entered(body: Node2D) -> void:
-	pass # Replace with function body.
