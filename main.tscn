@@ -96,110 +96,33 @@ texture = ExtResource("2_162y0")
 physics_layer_0/collision_layer = 1
 sources/1 = SubResource("TileSetAtlasSource_h7ba5")
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3me0s"]
-radius = 21.0
-height = 82.0
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_x852w"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("3_8ll78")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_32nct")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_2ak6k")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_snv6h")
-}],
-"loop": true,
-"name": &"idle",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("7_v7nwm")
-}, {
-"duration": 1.0,
-"texture": ExtResource("8_pk8aa")
-}, {
-"duration": 1.0,
-"texture": ExtResource("9_571pj")
-}, {
-"duration": 1.0,
-"texture": ExtResource("10_6uqv2")
-}, {
-"duration": 1.0,
-"texture": ExtResource("11_lk0p4")
-}, {
-"duration": 1.0,
-"texture": ExtResource("12_g8dhe")
-}],
-"loop": true,
-"name": &"jump",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("13_fx4q4")
-}, {
-"duration": 1.0,
-"texture": ExtResource("14_pyutn")
-}, {
-"duration": 1.0,
-"texture": ExtResource("15_bimi5")
-}, {
-"duration": 1.0,
-"texture": ExtResource("16_ms72u")
-}, {
-"duration": 1.0,
-"texture": ExtResource("17_ue42n")
-}, {
-"duration": 1.0,
-"texture": ExtResource("18_g20gq")
-}],
-"loop": true,
-"name": &"jump-left",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("19_hy7f3")
-}, {
-"duration": 1.0,
-"texture": ExtResource("20_1rp6f")
-}, {
-"duration": 1.0,
-"texture": ExtResource("21_jt6mn")
-}, {
-"duration": 1.0,
-"texture": ExtResource("22_lfohk")
-}],
-"loop": true,
-"name": &"walk-left",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("23_y1tyg")
-}, {
-"duration": 1.0,
-"texture": ExtResource("24_vexcx")
-}, {
-"duration": 1.0,
-"texture": ExtResource("25_23ml5")
-}, {
-"duration": 1.0,
-"texture": ExtResource("26_010p2")
-}],
-"loop": true,
-"name": &"walk-right",
-"speed": 5.0
-}]
+[node name="Echo" parent="." instance=ExtResource("2_k1kv4")]
+position = Vector2(-109, 82)
 
+[node name="Camera2D" type="Camera2D" parent="Echo"]
+position = Vector2(376.5, 139)
+position_smoothing_enabled = true
+position_smoothing_speed = 7.0
+
+[node name="access_point" type="Node2D" parent="Echo"]
+position = Vector2(54.5, -41)
+scale = Vector2(0.5, 0.5)
+
+[node name="AccessPoint_R" parent="Echo/access_point" instance=ExtResource("3_mca5j")]
+position = Vector2(1809, 433)
+
+[node name="CollisionShape2D" parent="Echo/access_point/AccessPoint_R" index="0"]
+position = Vector2(635, 164)
+
+[node name="Spawn" parent="Echo/access_point/AccessPoint_R" index="1"]
+position = Vector2(533, 113)
+
+[node name="FirstLevel2" parent="Echo/access_point/AccessPoint_R" instance=ExtResource("4_ceevh")]
+position = Vector2(719, -421)
+
+[editable path="Echo/access_point/AccessPoint_R"]
+=======
 [sub_resource type="SpriteFrames" id="SpriteFrames_e2qwj"]
 animations = [{
 "frames": [{

@@ -2,18 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-
-uid="uid://nam8silupjk2"
-
-path="res://.godot/imported/MedievalTimesBackground.png-5ecfed0dbb4adc6efd7e6bbecd7e6fc1.ctex"
+uid="uid://ban4w35vqe75w"
+path="res://.godot/imported/menu_spritesheet.png-5a74f5d1fb3e1dd830776fae2f4eaade.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/backgrounds/MedievalTimesBackground.png"
-dest_files=["res://.godot/imported/MedievalTimesBackground.png-5ecfed0dbb4adc6efd7e6bbecd7e6fc1.ctex"]
+source_file="res://assets/menu_spritesheet.png"
+dest_files=["res://.godot/imported/menu_spritesheet.png-5a74f5d1fb3e1dd830776fae2f4eaade.ctex"]
 
 [params]
 
