@@ -99,6 +99,9 @@ position = Vector2(83, 627)
 position = Vector2(1121, 680)
 scale = Vector2(2, 2)
 
+[node name="CollisionShape2D" parent="Artifact" index="1"]
+z_index = 1
+
 [connection signal="body_entered" from="Artifact" to="Echo" method="_on_artifact_body_entered"]
 
 [editable path="Artifact"]
