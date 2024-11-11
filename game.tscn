@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dtc0o2gsr0nl5" path="res://assets/backgrounds/WarehouseBackground.png" id="1_1u0n2"]
 [ext_resource type="Script" path="res://scripts/Player.cs" id="1_romvo"]
-[ext_resource type="Texture2D" uid="uid://4rn5j7byqhl8" path="res://tilesets/atlas_floor-16x16.png" id="2_162y0"]
+[ext_resource type="Texture2D" uid="uid://4rn5j7byqhl8" path="res://assets/tilesets/atlas_floor-16x16.png" id="2_162y0"]
 [ext_resource type="Texture2D" uid="uid://bgl0o4k2ghvk2" path="res://assets/sprites/echo/sprite_idle/idle_1.png" id="3_8ll78"]
 [ext_resource type="Texture2D" uid="uid://gnrqx1g300u1" path="res://assets/sprites/echo/sprite_idle/idle_2.png" id="4_32nct"]
 [ext_resource type="Texture2D" uid="uid://byclxwbf3p3lx" path="res://assets/sprites/echo/sprite_idle/idle_3.png" id="5_2ak6k"]
@@ -234,8 +234,11 @@ animations = [{
 
 [node name="Node2D" type="Node2D"]
 
-[node name="Background_A" type="Sprite2D" parent="."]
-position = Vector2(725.75, 366.5)
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(642, 376)
+
+[node name="Background_A" type="Sprite2D" parent="Camera2D"]
+position = Vector2(83.7501, -9.5)
 scale = Vector2(0.573436, 0.669444)
 texture = ExtResource("1_1u0n2")
 
@@ -277,4 +280,4 @@ script = ExtResource("30_snr51")
 position = Vector2(31.4667, 3.73332)
 scale = Vector2(0.4, 0.5)
 sprite_frames = SubResource("SpriteFrames_e2qwj")
-frame_progress = 0.317351
+frame_progress = 0.949065
