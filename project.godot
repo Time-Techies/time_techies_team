@@ -28,3 +28,7 @@ window/stretch/mode="viewport"
 [dotnet]
 
 project/assembly_name="Time Techies Game"
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0

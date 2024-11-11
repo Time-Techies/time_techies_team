@@ -1,0 +1,65 @@
+[gd_scene load_steps=7 format=3 uid="uid://7a5xgcj1pg4a"]
+
+[ext_resource type="Texture2D" uid="uid://h6n2n8dmy13q" path="res://assets/GUI_stuff/start-button/start-rest.png" id="1_24y84"]
+[ext_resource type="Script" path="res://start-screen/MainMenu.cs" id="1_rd8y4"]
+[ext_resource type="Texture2D" uid="uid://drnu1vuxflqcn" path="res://assets/GUI_stuff/start-button/start-click.png" id="2_bm77f"]
+[ext_resource type="Texture2D" uid="uid://ccraktofjx34g" path="res://assets/GUI_stuff/flashback-title2.png" id="2_ugtwv"]
+[ext_resource type="Texture2D" uid="uid://i4i5clb3gmcf" path="res://assets/GUI_stuff/start-button/start-hover.png" id="3_iw3bb"]
+[ext_resource type="FontFile" uid="uid://onor02ydp60l" path="res://assets/GUI_stuff/pixel-font.ttf" id="6_sp7fq"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rd8y4")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 2
+offset_left = 239.0
+offset_top = -123.0
+offset_right = 1089.0
+offset_bottom = 492.0
+texture = ExtResource("2_ugtwv")
+stretch_mode = 5
+
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 2
+offset_left = 473.0
+offset_top = 470.0
+offset_right = 842.0
+offset_bottom = 564.0
+size_flags_horizontal = 8
+size_flags_vertical = 8
+texture_normal = ExtResource("1_24y84")
+texture_pressed = ExtResource("2_bm77f")
+texture_hover = ExtResource("3_iw3bb")
+stretch_mode = 5
+
+[node name="LineEdit" type="LineEdit" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.208
+anchor_bottom = 0.181
+offset_left = 510.0
+offset_top = 381.0
+offset_right = 539.76
+offset_bottom = 318.68
+theme_override_colors/font_placeholder_color = Color(0.458405, 0.458405, 0.458405, 1)
+theme_override_colors/font_color = Color(0.899258, 0.899258, 0.899258, 1)
+theme_override_fonts/font = ExtResource("6_sp7fq")
+theme_override_font_sizes/font_size = 49
+placeholder_text = "Enter Player Name"
+
+[connection signal="pressed" from="TextureButton" to="." method="OnButtonPressed"]
