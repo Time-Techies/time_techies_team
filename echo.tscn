@@ -17,7 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://bc0814nkjaqxk" path="res://assets/sprites/echo/jump-left/left-jump3.png" id="15_61oud"]
 [ext_resource type="Texture2D" uid="uid://cxn0c376mvxi8" path="res://assets/sprites/echo/jump-left/left-jump4.png" id="16_1xfwc"]
 [ext_resource type="Texture2D" uid="uid://c7wbx7qgfye4o" path="res://assets/sprites/echo/jump-left/left-jump5.png" id="17_p01eq"]
-[ext_resource type="Texture2D" uid="uid://whhfwwpxl8ow" path="res://assets/items/spr_sans.png" id="18_ctsxj"]
+[ext_resource type="Texture2D" uid="uid://whhfwwpxl8ow" path="res://assets/sprites/echo/jump-left/left-jump6.png" id="18_ctsxj"]
 [ext_resource type="Texture2D" uid="uid://bk0cbjuy8mi02" path="res://assets/sprites/echo/jump-left/left-jump7.png" id="19_t4odu"]
 [ext_resource type="Texture2D" uid="uid://cctp71voswiaw" path="res://assets/sprites/echo/walk-left/s_lwalk1.png" id="20_p510j"]
 [ext_resource type="Texture2D" uid="uid://w58q3hkrkce1" path="res://assets/sprites/echo/walk-left/s_lwalk2.png" id="21_dgcqe"]
