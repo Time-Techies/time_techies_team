@@ -1,12 +1,12 @@
 [gd_scene load_steps=3 format=3 uid="uid://b7otc8dp0tvjs"]
 
-[ext_resource type="Script" path="res://scripts/accessPoint.cs" id="1_osedv"]
+[ext_resource type="Script" path="res://accessPoint.gd" id="1_yvsgw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q0je4"]
 size = Vector2(134, 186.5)
 
 [node name="AccessPoint" type="Area2D"]
-script = ExtResource("1_osedv")
+script = ExtResource("1_yvsgw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1199, 609)

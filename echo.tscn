@@ -1,6 +1,6 @@
 [gd_scene load_steps=31 format=3 uid="uid://b4vd77v1am5q6"]
 
-[ext_resource type="Script" path="res://scripts/Player.cs" id="1_yhvxw"]
+[ext_resource type="Script" path="res://echo.gd" id="1_b3fy0"]
 [ext_resource type="Texture2D" uid="uid://bgl0o4k2ghvk2" path="res://assets/sprites/echo/sprite_idle/idle_1.png" id="2_gbqrf"]
 [ext_resource type="Texture2D" uid="uid://gnrqx1g300u1" path="res://assets/sprites/echo/sprite_idle/idle_2.png" id="3_tenwx"]
 [ext_resource type="Texture2D" uid="uid://byclxwbf3p3lx" path="res://assets/sprites/echo/sprite_idle/idle_3.png" id="4_0pbm1"]
@@ -17,7 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://bc0814nkjaqxk" path="res://assets/sprites/echo/jump-left/left-jump3.png" id="15_61oud"]
 [ext_resource type="Texture2D" uid="uid://cxn0c376mvxi8" path="res://assets/sprites/echo/jump-left/left-jump4.png" id="16_1xfwc"]
 [ext_resource type="Texture2D" uid="uid://c7wbx7qgfye4o" path="res://assets/sprites/echo/jump-left/left-jump5.png" id="17_p01eq"]
-[ext_resource type="Texture2D" uid="uid://whhfwwpxl8ow" path="res://assets/sprites/echo/jump-left/left-jump6.png" id="18_ctsxj"]
+[ext_resource type="Texture2D" uid="uid://whhfwwpxl8ow" path="res://assets/items/spr_sans.png" id="18_ctsxj"]
 [ext_resource type="Texture2D" uid="uid://bk0cbjuy8mi02" path="res://assets/sprites/echo/jump-left/left-jump7.png" id="19_t4odu"]
 [ext_resource type="Texture2D" uid="uid://cctp71voswiaw" path="res://assets/sprites/echo/walk-left/s_lwalk1.png" id="20_p510j"]
 [ext_resource type="Texture2D" uid="uid://w58q3hkrkce1" path="res://assets/sprites/echo/walk-left/s_lwalk2.png" id="21_dgcqe"]
@@ -140,12 +140,12 @@ size = Vector2(21, 88.75)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yllxu"]
 size = Vector2(23.5, 89)
 
-[node name="Echo" type="CharacterBody2D"]
+[node name="Echo" type="CharacterBody2D" groups=["Echo"]]
 position = Vector2(4, 0)
 scale = Vector2(2, 2)
-script = ExtResource("1_yhvxw")
+script = ExtResource("1_b3fy0")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." groups=["Echo"]]
 z_index = 1
 texture_filter = 1
 position = Vector2(94.5, 262)
@@ -154,10 +154,10 @@ sprite_frames = SubResource("SpriteFrames_58evv")
 animation = &"idle"
 autoplay = "idle"
 
-[node name="walk-left" type="CollisionShape2D" parent="."]
+[node name="walk-left" type="CollisionShape2D" parent="." groups=["Echo"]]
 position = Vector2(86.5, 272.375)
 shape = SubResource("RectangleShape2D_f336r")
 
-[node name="walk-right" type="CollisionShape2D" parent="."]
+[node name="walk-right" type="CollisionShape2D" parent="." groups=["Echo"]]
 position = Vector2(102.25, 272)
 shape = SubResource("RectangleShape2D_yllxu")
