@@ -1,6 +1,6 @@
 using Godot;
-using System;
-using GodotPlugins.Game;
+
+namespace TimeTechiesGame.scripts;
 
 public partial class world_audio : AudioStreamPlayer2D
 {
