@@ -8,7 +8,7 @@ public partial class MainMenu : Control
 	private LineEdit _nameInput;
 	private Button _startButton;
 
-	private string _filePath = "res://start-screen/player-name-data.txt";
+	private string _filePath = "start-screen/names.txt";
 	
 	public override void _Ready()
 	{
@@ -25,21 +25,42 @@ public partial class MainMenu : Control
 	{
 		// Change to game scene
 		GetTree().ChangeSceneToFile("res://main.tscn");
-
+		
 		string PlayerName = _nameInput.Text;
 		
-		SaveTextToFile(PlayerName);
+		GD.Print("Button was pressed! Player Name: " + PlayerName);
 		
-		GD.Print("Player Name: " + PlayerName);
+		//Call function to save the name to file
+		SaveTextToFile(PlayerName);
 	}
 
 	private void SaveTextToFile(string PlayerName)
 	{
-		if (_nameInput == null)
+		// What to do if player does not enter name
+		if (PlayerName == String.Empty)
 		{
-			GD.PrintErr("No Player Name Entered");
+			GD.Print("No Player Name Entered");
 			return;
 		}
-		File.WriteAllText(_filePath, PlayerName);
+		GD.Print("Test printing woooooooooooo " + PlayerName);
+		
+		// Write PlayerName to "player-name-data.txt" file
+		try
+		{
+			//File.WriteAllText(_filePath, PlayerName);
+			using (StreamWriter writer = new StreamWriter(_filePath, append: true))
+			{
+				writer.WriteLine(PlayerName);
+			}
+
+			GD.Print($"Text saved to {_filePath}");
+		}
+		catch (Exception ex)
+		{
+			// Catch any exceptions and print the error
+			GD.PrintErr($"Error saving file: {ex.Message}");
+		}
+		
+		GD.Print("Saved Player Name: " + PlayerName);
 	}
 }

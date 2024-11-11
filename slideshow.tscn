@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=3 uid="uid://c0fla3ix7d2fs"]
+
+[ext_resource type="Texture2D" uid="uid://dqqlyouy6e1vs" path="res://assets/book-slideshow/book1.png" id="1_v6asb"]
+[ext_resource type="Texture2D" uid="uid://5o1qukime8q2" path="res://assets/book-slideshow/Book2.png" id="2_e2knq"]
+[ext_resource type="Texture2D" uid="uid://d1g42kec7ojry" path="res://assets/book-slideshow/book3.png" id="3_e17ms"]
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_njtsy"]
+frames = 3
+one_shot = true
+speed_scale = 0.1
+frame_0/texture = ExtResource("1_v6asb")
+frame_1/texture = ExtResource("2_e2knq")
+frame_1/duration = 1.0
+frame_2/texture = ExtResource("3_e17ms")
+frame_2/duration = 1.0
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 113.0
+offset_top = 77.0
+offset_right = 1182.0
+offset_bottom = 615.0
+texture = SubResource("AnimatedTexture_njtsy")
+stretch_mode = 5

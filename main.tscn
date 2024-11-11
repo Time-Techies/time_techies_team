@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://cyknqyaf3pf2g"]
+[gd_scene load_steps=35 format=3 uid="uid://cyknqyaf3pf2g"]
 
 [ext_resource type="Texture2D" uid="uid://dtc0o2gsr0nl5" path="res://assets/backgrounds/WarehouseBackground.png" id="1_1u0n2"]
 [ext_resource type="Script" path="res://scripts/Player.cs" id="1_romvo"]
@@ -28,6 +28,7 @@
 [ext_resource type="Texture2D" uid="uid://c0yswn076tp6l" path="res://assets/sprites/echo/walk-right/s_rwalk3.png" id="25_23ml5"]
 [ext_resource type="Texture2D" uid="uid://b6y1oqnrpt1ju" path="res://assets/sprites/echo/walk-right/s_rwalk4.png" id="26_010p2"]
 [ext_resource type="AudioStream" uid="uid://0n7u88257aow" path="res://assets/music/mus_creepy_ambience.ogg" id="26_dl6vf"]
+[ext_resource type="Texture2D" uid="uid://tcmua4kmksjo" path="res://assets/items/book2.png" id="29_5fyjk"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_g6nni"]
 
@@ -138,6 +139,8 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_uvra8"]
+
 [node name="Node2D" type="Node2D"]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
@@ -202,3 +205,12 @@ scale = Vector2(0.666667, 0.666667)
 position = Vector2(194.516, 160.432)
 rotation = -0.523598
 color = Color(0.72549, 0.713726, 0.360784, 1)
+
+[node name="Book2" type="Sprite2D" parent="."]
+position = Vector2(1213, 658)
+scale = Vector2(3.53125, 3.39063)
+texture = ExtResource("29_5fyjk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Book2"]
+position = Vector2(-0.707961, 0.0737397)
+shape = SubResource("CircleShape2D_uvra8")
