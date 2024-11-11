@@ -86,3 +86,5 @@ flip_h = true
 position = Vector2(-640, 381)
 scale = Vector2(0.505146, 0.67037)
 texture = ExtResource("2_42t40")
+
+[editable path="AccessPoint"]

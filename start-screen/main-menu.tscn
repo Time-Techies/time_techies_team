@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://i4i5clb3gmcf" path="res://assets/GUI_stuff/start-button/start-hover.png" id="3_iw3bb"]
 [ext_resource type="FontFile" uid="uid://onor02ydp60l" path="res://assets/GUI_stuff/pixel-font.ttf" id="6_sp7fq"]
 
-[node name="Control" type="Control"]
+[node name="Control" type="Control" groups=["Echo"]]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
