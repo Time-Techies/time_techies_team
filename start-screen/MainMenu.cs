@@ -1,7 +1,7 @@
-using Godot;
-using System;
 using System.IO;
-using FileAccess = Godot.FileAccess;
+using Godot;
+
+namespace TimeTechiesGame.start_screen;
 
 public partial class MainMenu : Control
 {

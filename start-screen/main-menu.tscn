@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://7a5xgcj1pg4a"]
+[gd_scene load_steps=7 format=3 uid="uid://c6xrk6vs15825"]
 
 [ext_resource type="Texture2D" uid="uid://h6n2n8dmy13q" path="res://assets/GUI_stuff/start-button/start-rest.png" id="1_24y84"]
 [ext_resource type="Script" path="res://start-screen/MainMenu.cs" id="1_rd8y4"]
@@ -50,12 +50,12 @@ stretch_mode = 5
 [node name="LineEdit" type="LineEdit" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_right = 0.208
-anchor_bottom = 0.181
+anchor_right = 0.167
+anchor_bottom = 0.135
 offset_left = 510.0
 offset_top = 381.0
-offset_right = 539.76
-offset_bottom = 318.68
+offset_right = 592.24
+offset_bottom = 351.8
 theme_override_colors/font_placeholder_color = Color(0.458405, 0.458405, 0.458405, 1)
 theme_override_colors/font_color = Color(0.899258, 0.899258, 0.899258, 1)
 theme_override_fonts/font = ExtResource("6_sp7fq")
