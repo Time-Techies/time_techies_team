@@ -25,7 +25,7 @@ public partial class MainMenu : Control
 	private void OnButtonPressed()
 	{
 		// Change to game scene
-		GetTree().ChangeSceneToFile("res://main.tscn");
+		GetTree().ChangeSceneToFile("res://game.tscn");
 
 		string PlayerName = _nameInput.Text;
 		

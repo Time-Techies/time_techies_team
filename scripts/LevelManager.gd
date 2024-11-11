@@ -1,8 +1,8 @@
 extends Node
 
-@onready var first_scene = preload("res://main.tscn")
-@onready var second_scene = preload("res://second_level.tscn")
-@onready var player_scene = preload("res://echo.tscn")
+@onready var first_scene = preload("res://game.tscn")
+@onready var second_scene = preload("res://levels/medieval/medieval.tscn")
+@onready var player_scene = preload("res://echo/echo.tscn")
 
 signal on_trigger_player_spawn(position: Vector2, direction: String)
 

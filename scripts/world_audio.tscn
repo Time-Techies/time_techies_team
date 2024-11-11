@@ -1,3 +1,0 @@
-[gd_scene format=3 uid="uid://we8keimc3emi"]
-
-[node name="WorldAudio" type="AudioStreamPlayer2D"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bhonmp3obml4v"
-path="res://.godot/imported/ForestBackground.png-fde25b59ac1c87a09fbc99c14a280dd9.ctex"
+uid="uid://b0u3qj5t5ral7"
+path="res://.godot/imported/sprite-jump2.png-98ca957044a9f26b34c3d6cb949ca138.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/backgrounds/ForestBackground.png"
-dest_files=["res://.godot/imported/ForestBackground.png-fde25b59ac1c87a09fbc99c14a280dd9.ctex"]
+source_file="res://echo/sprites/jump/sprite-jump2.png"
+dest_files=["res://.godot/imported/sprite-jump2.png-98ca957044a9f26b34c3d6cb949ca138.ctex"]
 
 [params]
 

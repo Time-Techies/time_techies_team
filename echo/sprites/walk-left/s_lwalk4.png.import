@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bhonmp3obml4v"
-path="res://.godot/imported/ForestBackground.png-fde25b59ac1c87a09fbc99c14a280dd9.ctex"
+uid="uid://cbn35xqf1101k"
+path="res://.godot/imported/s_lwalk4.png-cd8a58450f4cf59a5916f44727d46adc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/backgrounds/ForestBackground.png"
-dest_files=["res://.godot/imported/ForestBackground.png-fde25b59ac1c87a09fbc99c14a280dd9.ctex"]
+source_file="res://echo/sprites/walk-left/s_lwalk4.png"
+dest_files=["res://.godot/imported/s_lwalk4.png-cd8a58450f4cf59a5916f44727d46adc.ctex"]
 
 [params]
 

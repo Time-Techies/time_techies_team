@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bhonmp3obml4v"
-path="res://.godot/imported/ForestBackground.png-fde25b59ac1c87a09fbc99c14a280dd9.ctex"
+uid="uid://byclxwbf3p3lx"
+path="res://.godot/imported/idle_3.png-210f1e0178bf3bed4da489289f318db7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/backgrounds/ForestBackground.png"
-dest_files=["res://.godot/imported/ForestBackground.png-fde25b59ac1c87a09fbc99c14a280dd9.ctex"]
+source_file="res://echo/sprites/sprite_idle/idle_3.png"
+dest_files=["res://.godot/imported/idle_3.png-210f1e0178bf3bed4da489289f318db7.ctex"]
 
 [params]
 
