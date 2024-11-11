@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://cisushsynky2t"]
+
+[ext_resource type="Texture2D" uid="uid://dtc0o2gsr0nl5" path="res://assets/backgrounds/WarehouseBackground.png" id="1_d12c3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dm5wb"]
+size = Vector2(2524, 1.75)
+
+[node name="FirstLevel" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1, -362)
+texture = ExtResource("1_d12c3")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1266, 720.125)
+shape = SubResource("RectangleShape2D_dm5wb")

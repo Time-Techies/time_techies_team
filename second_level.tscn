@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://b3tie5nldnf4r"]
+
+[ext_resource type="Texture2D" uid="uid://b46klctdhagam" path="res://assets/backgrounds/ForestBackground.png" id="1_6xbgg"]
+[ext_resource type="PackedScene" uid="uid://b7otc8dp0tvjs" path="res://accessPoint.tscn" id="2_gt2et"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4l6uk"]
+size = Vector2(2524, 0.5)
+
+[node name="FirstLevel" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1651, -44)
+texture = ExtResource("1_6xbgg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1263, 716.25)
+shape = SubResource("RectangleShape2D_4l6uk")
+
+[node name="AccessPoint_L" parent="." instance=ExtResource("2_gt2et")]
+position = Vector2(-531, 409)
+
+[node name="CollisionShape2D" parent="AccessPoint_L" index="0"]
+position = Vector2(623, 196)
+
+[node name="Spawn" parent="AccessPoint_L" index="1"]
+position = Vector2(623, 200)
+
+[editable path="AccessPoint_L"]

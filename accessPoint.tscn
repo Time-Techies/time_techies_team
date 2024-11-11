@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://b7otc8dp0tvjs"]
+
+[ext_resource type="Script" path="res://accessPoint.gd" id="1_yvsgw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q0je4"]
+size = Vector2(134, 186.5)
+
+[node name="AccessPoint" type="Area2D"]
+script = ExtResource("1_yvsgw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1199, 609)
+shape = SubResource("RectangleShape2D_q0je4")
+
+[node name="Spawn" type="Marker2D" parent="."]
+position = Vector2(1081, 608)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
