@@ -134,23 +134,24 @@ height = 96.56
 [node name="Echo" type="CharacterBody2D" groups=["Echo"]]
 position = Vector2(-18, 21)
 scale = Vector2(2, 2)
+collision_layer = 255
+collision_mask = 255
 platform_floor_layers = 4294967041
 script = ExtResource("1_kdvum")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-z_index = 1
 texture_filter = 1
 position = Vector2(-2, -10)
 scale = Vector2(1.2, 1.2)
 sprite_frames = SubResource("SpriteFrames_58evv")
-animation = &"jump-default"
+animation = &"idle"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-z_as_relative = false
 shape = SubResource("CapsuleShape2D_bp6vw")
 
 [node name="Lantern" parent="." instance=ExtResource("28_nodwb")]
+z_index = 1
 position = Vector2(36.5, 6)
 scale = Vector2(0.4, 0.5)
 
