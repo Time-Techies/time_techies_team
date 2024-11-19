@@ -1,8 +1,10 @@
-[gd_scene load_steps=6 format=4 uid="uid://dbik2c7viukvx"]
+[gd_scene load_steps=8 format=4 uid="uid://dbik2c7viukvx"]
 
 [ext_resource type="AudioStream" uid="uid://bp7pyianrvv6t" path="res://assets/music/field_of_hopes.ogg" id="1_2fj20"]
 [ext_resource type="Texture2D" uid="uid://4rn5j7byqhl8" path="res://assets/tilesets/atlas_floor-16x16.png" id="1_pnsj6"]
 [ext_resource type="Texture2D" uid="uid://nam8silupjk2" path="res://assets/backgrounds/MedievalTimesBackground.png" id="2_42t40"]
+[ext_resource type="PackedScene" uid="uid://b4vd77v1am5q6" path="res://echo/echo.tscn" id="4_x8asb"]
+[ext_resource type="PackedScene" uid="uid://daj21ibegts6q" path="res://artifacts/artifact.tscn" id="5_6te5o"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_654qe"]
 texture = ExtResource("1_pnsj6")
@@ -66,7 +68,6 @@ sources/0 = SubResource("TileSetAtlasSource_654qe")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("1_2fj20")
-volume_db = -0.23
 autoplay = true
 parameters/looping = true
 
@@ -89,3 +90,10 @@ flip_h = true
 position = Vector2(-640, 381)
 scale = Vector2(0.505146, 0.67037)
 texture = ExtResource("2_42t40")
+
+[node name="Echo" parent="." instance=ExtResource("4_x8asb")]
+position = Vector2(1094, 627)
+
+[node name="Artifact" parent="." instance=ExtResource("5_6te5o")]
+position = Vector2(115, 667)
+scale = Vector2(2, 2)

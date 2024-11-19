@@ -76,12 +76,12 @@ tile_map_data = PackedByteArray("AAAAAC0AAAAAAAAAAAABAC0AAAAAAAAAAAACAC0AAAAAAAA
 tile_set = SubResource("TileSet_v4k3e")
 
 [node name="Backbround_A" type="Sprite2D" parent="."]
-position = Vector2(1118, 362)
+position = Vector2(1111, 361)
 scale = Vector2(0.69436, 0.522442)
 texture = ExtResource("2_tamic")
 
 [node name="Backbround_A2" type="Sprite2D" parent="."]
-position = Vector2(3409, 362)
+position = Vector2(3354, 361)
 scale = Vector2(0.69436, 0.522442)
 texture = ExtResource("2_tamic")
 flip_h = true
@@ -92,9 +92,10 @@ scale = Vector2(0.69436, 0.522442)
 texture = ExtResource("2_tamic")
 flip_h = true
 
-[node name="Echo" parent="." instance=ExtResource("3_6p1rg")]
-position = Vector2(83, 627)
-
 [node name="Artifact" parent="." instance=ExtResource("4_i8ve6")]
-position = Vector2(919, 676)
+z_as_relative = false
+position = Vector2(1113, 683)
 scale = Vector2(2, 2)
+
+[node name="Echo" parent="." instance=ExtResource("3_6p1rg")]
+position = Vector2(131, 650)

@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Time Techies Game"
-run/main_scene="res://game.tscn"
+run/main_scene="res://start-screen/main-menu.tscn"
 config/features=PackedStringArray("4.3", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 <<<<<<<HEADrun/main_scene="res://game.tscn"
@@ -32,6 +32,10 @@ window/stretch/mode="viewport"
 [dotnet]
 
 project/assembly_name="Time Techies Game"
+
+[global_group]
+
+Echo=""
 
 [input]
 

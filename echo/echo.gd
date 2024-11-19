@@ -9,9 +9,15 @@ extends CharacterBody2D
 
 func _ready():
 	# Verify that the AnimatedSprite2D node exists
+	print(Echo.get_name())
 	if !animated_sprite:
 		push_error("AnimatedSprite2D node not found!")
 		return
+		
+func _on_area_entered(body):
+	if body.is_in_group("Artifact"):
+		# Collision detected!
+		print("Collision detected with Artifact")
 
 func _process(delta):
 	# Make sure animated_sprite exists before trying to play animations
@@ -49,3 +55,9 @@ func _physics_process(delta):
 		velocity.x = 0
 
 	move_and_slide()
+
+
+func _on_artifact_body_entered(body: Node2D) -> void:
+	if body.is_in_group("Artifact"):
+		# Collision detected!
+		print("Collision detected with Artifact") # Replace with function body.
